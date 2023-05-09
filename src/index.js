@@ -18,6 +18,7 @@ class CurrencyInput extends Component {
         this.setSelectionRange = this.setSelectionRange.bind(this);
         this.state = this.prepareProps(this.props);
 
+        console.log("OK")
         this.inputSelectionStart = 1;
         this.inputSelectionEnd = 1;
     }
