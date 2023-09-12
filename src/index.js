@@ -18,8 +18,6 @@ class CurrencyInput extends Component {
         this.setSelectionRange = this.setSelectionRange.bind(this);
         this.state = this.prepareProps(this.props);
 
-        console.log("Initializated class")
-        
         this.inputSelectionStart = 1;
         this.inputSelectionEnd = 1;
     }
@@ -121,8 +119,6 @@ class CurrencyInput extends Component {
      * @see https://facebook.github.io/react/docs/react-component.html#componentdidmount
      */
     componentDidMount(){
-        console.log("DidMount")
-        
         let node = ReactDOM.findDOMNode(this.theInput);
         let selectionStart, selectionEnd;
 
@@ -145,7 +141,6 @@ class CurrencyInput extends Component {
      * @see https://facebook.github.io/react/docs/react-component.html#componentwillupdate
      */
     componentWillUpdate() {
-        console.log("WillUpdate")
         let node = ReactDOM.findDOMNode(this.theInput);
         this.inputSelectionStart = node.selectionStart;
         this.inputSelectionEnd = node.selectionEnd;
@@ -158,7 +153,6 @@ class CurrencyInput extends Component {
      * @see https://facebook.github.io/react/docs/react-component.html#componentdidupdate
      */
     componentDidUpdate(prevProps, prevState){
-        console.log("DidUpdate")
         const { decimalSeparator } = this.props;
         let node = ReactDOM.findDOMNode(this.theInput);
         let isNegative = (this.theInput.value.match(/-/g) || []).length % 2 === 1;
